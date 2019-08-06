@@ -1,0 +1,48 @@
+V1.0.0   20190731
+1继承自大神作品，可以稳定运行，实现音乐播放功能；
+2修改app显示名称，如下将label修改自己定义的名称；
+ <application
+        android:name=".TimberApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Timber${appNameSuffix}"
+        android:theme="@style/AppTheme.FullScreen.Light"
+        tools:replace="android:allowBackup, android:label">
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="Timber${appNameSuffix}"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+改为：
+    <application
+        android:name=".TimberApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Timber_V1.0.0"
+        android:theme="@style/AppTheme.FullScreen.Light"
+        tools:replace="android:allowBackup, android:label">
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="Timber_V1.0.0"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+ext {
+    // Sdk and tools
+    minSdkVersion = 16---24
+    targetSdkVersion = 26
+    compileSdkVersion = 26
+//    buildToolsVersion = '26.0.2'
+    buildToolsVersion = '28.0.3'
+
+    // App dependencies
+    supportLibraryVersion = '27.0.2'
+    retrofitVersion = '2.3.0'
+    okHttp3Version = '3.9.0'
+}
+
+
